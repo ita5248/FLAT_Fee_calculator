@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-
+#rrrr
 LARGE_FONT = ("Arial", "12")
 NORMAL_FONT = ("Arial", "10")
 SMALL_FONT = ("Arial", "8")
