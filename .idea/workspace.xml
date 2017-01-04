@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be21c0b7-2515-487e-83d9-04bc47c06112" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exampl.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fees2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/func_read.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
@@ -26,25 +25,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="326">
+              <caret line="353" column="31" lean-forward="true" selection-start-line="307" selection-start-column="4" selection-end-line="353" selection-end-column="31" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <element signature="e#2654#3019#0" expanded="false" />
-                <element signature="e#11921#13742#0" expanded="false" />
-                <element signature="e#13790#16434#0" expanded="false" />
-                <element signature="e#16484#18554#0" expanded="false" />
-                <element signature="e#16798#18554#1" expanded="false" />
-                <element signature="e#18600#18752#0" expanded="false" />
+                <element signature="e#2620#2985#0" expanded="false" />
+                <element signature="e#11887#13709#0" expanded="false" />
+                <element signature="e#15647#18291#0" expanded="false" />
+                <element signature="e#18341#20411#0" expanded="false" />
+                <element signature="e#18655#20411#1" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="func_read.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/func_read.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-187">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fees2.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fees2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>how_many</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,6 +85,8 @@
         <option value="$PROJECT_DIR$/../BIM_calculator/main.py" />
         <option value="$PROJECT_DIR$/exampl.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/fees2.txt" />
+        <option value="$PROJECT_DIR$/func_read.py" />
       </list>
     </option>
   </component>
@@ -98,7 +130,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BMI_calculator" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -106,7 +138,7 @@
       <recent name="C:\Python\Projekty\FLAT_Fee_calculator" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.func_read">
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,6 +186,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="FLAT_Fee_calculator" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exampl.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="func_read" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="FLAT_Fee_calculator" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/func_read.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -292,16 +341,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
       <item index="1" class="java.lang.String" itemvalue="Python.main (1)" />
       <item index="2" class="java.lang.String" itemvalue="Python.exampl" />
+      <item index="3" class="java.lang.String" itemvalue="Python.func_read" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.exampl" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.func_read" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main" />
+        <item index="2" class="java.lang.String" itemvalue="Python.main (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.exampl" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483476321651</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1483476453411</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1483476453411</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -342,20 +400,20 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12872024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31260228" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3133858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -386,423 +444,307 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
+    <entry file="file://$PROJECT_DIR$/exampl.py" />
+    <entry file="file://$PROJECT_DIR$/fees.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/fees2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIM_calculator/main.py" />
-    <entry file="file://$PROJECT_DIR$/exampl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
+        <state relative-caret-position="85">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="326">
+          <caret line="353" column="31" lean-forward="true" selection-start-line="307" selection-start-column="4" selection-end-line="353" selection-end-column="31" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2654#3019#0" expanded="false" />
-            <element signature="e#11921#13742#0" expanded="false" />
-            <element signature="e#13790#16434#0" expanded="false" />
-            <element signature="e#16484#18554#0" expanded="false" />
-            <element signature="e#16798#18554#1" expanded="false" />
-            <element signature="e#18600#18752#0" expanded="false" />
+            <element signature="e#2620#2985#0" expanded="false" />
+            <element signature="e#11887#13709#0" expanded="false" />
+            <element signature="e#15647#18291#0" expanded="false" />
+            <element signature="e#18341#20411#0" expanded="false" />
+            <element signature="e#18655#20411#1" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/func_read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
