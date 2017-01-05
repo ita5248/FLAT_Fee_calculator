@@ -82,7 +82,9 @@ class PageOne(tk.Frame):
         label_separator.grid(row=2, column=1)
 
         self.labels_page_one()
-        self.reading_previous_values()
+        #self.reading_previous_values()
+        self.reading_previous_values_2()
+        self.setting_previous_values()
 
         self.value_names = ["current_cold_water_bathroom_m3",
                             "current_hot_water_bathroom_m3",
@@ -110,30 +112,34 @@ class PageOne(tk.Frame):
 
     def labels_page_one(self):
 
+        # ##----------//      CREATING ICONS      //----------## #
+        column_icons = 0
         self.image_c_w = tk.PhotoImage(file="images_to_wge/cold_drop.png").subsample(4, 4)
         label_c_w_b = tk.Label(self, image=self.image_c_w)
         label_c_w_k = tk.Label(self, image=self.image_c_w)
-        label_c_w_b.grid(row=4, column=0)
-        label_c_w_k.grid(row=6, column=0)
+        label_c_w_b.grid(row=4, column=column_icons)
+        label_c_w_k.grid(row=6, column=column_icons)
 
         self.image_h_w = tk.PhotoImage(file="images_to_wge/hot_drop.png").subsample(4, 4)
         label_h_w_b = tk.Label(self, image=self.image_h_w)
         label_h_w_k = tk.Label(self, image=self.image_h_w)
-        label_h_w_b.grid(row=5, column=0)
-        label_h_w_k.grid(row=7, column=0)
+        label_h_w_b.grid(row=5, column=column_icons)
+        label_h_w_k.grid(row=7, column=column_icons)
 
         self.image_g = tk.PhotoImage(file="images_to_wge/gas.png").subsample(4, 4)
         label_g = tk.Label(self, image=self.image_g)
-        label_g.grid(row=8, column=0)
+        label_g.grid(row=8, column=column_icons)
 
         self.image_e = tk.PhotoImage(file="images_to_wge/energy.png").subsample(4, 4)
         label_e = tk.Label(self, image=self.image_e)
-        label_e.grid(row=9, column=0)
+        label_e.grid(row=9, column=column_icons)
+        # ##----------// ------------------------ //----------## #
 
         # ##----------// CREATING QUANTITY LABELS //----------## #
         column_quantity = 1
         label = ttk.Label(self, text="Quantity: ", font=LARGE_FONT)
         label.grid(row=3, column=column_quantity, sticky="e")
+
         quantity_list = [u"cold water bathroom [m\u00B3]: ",
                          u"hot water bathroom [m\u00B3]: ",
                          u"cold water kitchen [m\u00B3]: ",
@@ -258,54 +264,7 @@ class PageOne(tk.Frame):
         save_button = ttk.Button(self, text="Save to file", command=self.sting_saving_to_file)
         save_button.grid(row=12, column=difference_column, rowspan=3, columnspan=3, sticky="W")
 
-    def reading_previous_values(self):
-        """
-        Loading from file
-        Loads 11 pieces of data in following order:
-        0 - current_cold_water_bathroom_m3
-        1 - current_hot_water_bathroom_m3
-        2 - current_cold_water_kitchen_m3
-        3 - current_hot_water_kitchen_m3
-        4 - current_gas_m3
-        5 - current_energy_kwh
-        6 - cold_water_m3
-        7 - hot_water_m3
-        8 - gas_m3
-        9 - gas_const_fee
-        10 - energy_kwh
-        11 - energy_const_fee
-        """
-        fee_file = open("fees.txt", "r")
-        input_fee_data = fee_file.readlines()
-        input_fee_pairs = []
-        input_fee_values = []
-        #self.how_many_entries = (len(input_fee_data))
-
-        for line in input_fee_data:
-            input_fee_pairs.append(line.strip("\n").split(";"))
-
-        for i, pairs in enumerate(input_fee_pairs):
-            input_fee_values.append([])
-            for pair in pairs:
-                input_fee_values[i].append((pair.split(",")))
-        fee_file.close()
-
-        self.previous_values_list[0].set(input_fee_values[-1][0][1])
-        self.previous_values_list[1].set(input_fee_values[-1][1][1])
-        self.previous_values_list[2].set(input_fee_values[-1][2][1])
-        self.previous_values_list[3].set(input_fee_values[-1][3][1])
-        self.previous_values_list[4].set(input_fee_values[-1][4][1])
-        self.previous_values_list[5].set(input_fee_values[-1][5][1])
-        self.actual_cost_list[0].set(input_fee_values[-1][6][1])
-        self.actual_cost_list[1].set(input_fee_values[-1][7][1])
-        self.actual_cost_list[2].set(input_fee_values[-1][8][1])
-        self.actual_cost_list[3].set(input_fee_values[-1][9][1])
-        self.actual_cost_list[4].set(input_fee_values[-1][10][1])
-        self.actual_cost_list[5].set(input_fee_values[-1][11][1])
-
-        return input_fee_values
-
-    def reading_previous_values(self):
+    def reading_previous_values_2(self):
         """
         Loading from file
         Loads 11 pieces of data in following order:
@@ -323,35 +282,16 @@ class PageOne(tk.Frame):
         11 - energy_kwh
         12 - energy_const_fee
         """
-        fee_file = open("fees2.txt", "r")
-        input_fee_data = fee_file.readlines()
-        input_fee_pairs = []
-        input_fee_values = []
-        #self.how_many_entries = (len(input_fee_data))
+        self.all_values = []
+        with open("fees2.txt", "r") as fee_file:
+            for line in fee_file:
+                self.all_values.append(line[:-1].split(';'))
+        return self.all_values
 
-        for line in input_fee_data:
-            input_fee_pairs.append(line.strip("\n").split(";"))
-
-        for i, pairs in enumerate(input_fee_pairs):
-            input_fee_values.append([])
-            for pair in pairs:
-                input_fee_values[i].append((pair.split(",")))
-        fee_file.close()
-
-        self.previous_values_list[0].set(input_fee_values[-1][0][1])
-        self.previous_values_list[1].set(input_fee_values[-1][1][1])
-        self.previous_values_list[2].set(input_fee_values[-1][2][1])
-        self.previous_values_list[3].set(input_fee_values[-1][3][1])
-        self.previous_values_list[4].set(input_fee_values[-1][4][1])
-        self.previous_values_list[5].set(input_fee_values[-1][5][1])
-        self.actual_cost_list[0].set(input_fee_values[-1][6][1])
-        self.actual_cost_list[1].set(input_fee_values[-1][7][1])
-        self.actual_cost_list[2].set(input_fee_values[-1][8][1])
-        self.actual_cost_list[3].set(input_fee_values[-1][9][1])
-        self.actual_cost_list[4].set(input_fee_values[-1][10][1])
-        self.actual_cost_list[5].set(input_fee_values[-1][11][1])
-
-        return input_fee_values
+    def setting_previous_values(self):
+        for i in range(6):
+            self.previous_values_list[i].set(self.all_values[-1][i+1])
+            self.actual_cost_list[i].set(self.all_values[-1][i+1+6])
 
     def calculating_difference(self):
         """
