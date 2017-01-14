@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
 
-
 LARGE_FONT = ("Arial", "12")
 NORMAL_FONT = ("Arial", "10")
 SMALL_FONT = ("Arial", "8")
@@ -32,7 +31,7 @@ class Application(tk.Tk):
         change_cost_submenu = tk.Menu(edit_top_menu_bar, tearoff=0)   # create change cost menu  in edit menu
         edit_top_menu_bar.add_separator()
         edit_top_menu_bar.add_cascade(label="Change cost", menu=change_cost_submenu, underline=0)  # add change menu
-        change_cost_submenu.add_command(label="Cold water", command=PageOne.change_values_window)
+        change_cost_submenu.add_command(label="Cold water", command=lambda: PageOne.change_values_window(0))
         change_cost_submenu.add_command(label="Hot water", command=quit)
         change_cost_submenu.add_command(label="Gas", command=quit)
         change_cost_submenu.add_command(label="Gas const", command=quit)
@@ -99,11 +98,11 @@ class PageOne(tk.Frame):
                            "energy_kwh",
                            "energy_const_fee"]
 
-    @classmethod
-    def change_values_window(cls):
+    #@classmethod
+    def change_values_window(self, cost_index):
         popup = tk.Tk()
-        popup.wm_title("cos")
-        label = ttk.Label(popup, text="Change value of: ")
+        popup.wm_title("Cost change")
+        label = ttk.Label(popup, text="Change value of: {}".format(self.actual_cost_list[cost_index]))
         label.grid(row=0, column=0)
         entry = tk.Entry(popup, width=10)
         entry.grid(row=1, column=0)
@@ -285,7 +284,7 @@ class PageOne(tk.Frame):
         self.all_values = []
         with open("fees2.txt", "r") as fee_file:
             for line in fee_file:
-                self.all_values.append(line[:-1].split(';'))
+                self.all_values.append(line.strip().split(';'))
         return self.all_values
 
     def setting_previous_values(self):
