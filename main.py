@@ -1,22 +1,25 @@
 import tkinter as tk
 from tkinter import ttk
+import datetime
 
 LARGE_FONT = ("Arial", "12")
-NORMAL_FONT = ("Arial", "10")
+NORMAL_FONT = ("Helvetica", "10")
 SMALL_FONT = ("Arial", "8")
 
 
 class Application(tk.Tk):
 
     def __init__(self):
+        # inherit all attributes from Tk
         tk.Tk.__init__(self)
+        # make title and icon
         tk.Tk.title(self, "Flat fee calculator")
         tk.Tk.iconbitmap(self, bitmap="flat_fee_icon_tr.ico")
 
-        root = tk.Frame(self)                               # making main window caller root
-        root.pack(side="top", fill="both", expand=True)     # packing main window, and that window will fill and expand
-        root.grid_rowconfigure(0, weight=1)                 # configure grid of main window?
-        root.grid_columnconfigure(0, weight=1)              # configure grid of main window?
+        # in main window create root Frame in witch all frames will be shown later
+        root = tk.Frame(self)
+        # pack it, this is only one object in this window
+        root.pack(side="top", fill="both")
 
         top_menu_bar = tk.Menu(self)
         self.config(menu=top_menu_bar)
@@ -31,113 +34,89 @@ class Application(tk.Tk):
         change_cost_submenu = tk.Menu(edit_top_menu_bar, tearoff=0)   # create change cost menu  in edit menu
         edit_top_menu_bar.add_separator()
         edit_top_menu_bar.add_cascade(label="Change cost", menu=change_cost_submenu, underline=0)  # add change menu
-        change_cost_submenu.add_command(label="Cold water", command=lambda: PageOne.change_values_window(0))
-        change_cost_submenu.add_command(label="Hot water", command=quit)
-        change_cost_submenu.add_command(label="Gas", command=quit)
-        change_cost_submenu.add_command(label="Gas const", command=quit)
-        change_cost_submenu.add_command(label="Energy", command=quit)
-        change_cost_submenu.add_command(label="Enery const", command=quit)
+        change_cost_submenu.add_command(label="Cold water", command=lambda: self.change_values(0))
+        change_cost_submenu.add_command(label="Hot water", command=lambda: self.change_values(1))
+        change_cost_submenu.add_command(label="Gas", command=lambda: self.change_values(2))
+        change_cost_submenu.add_command(label="Gas const", command=lambda: self.change_values(3))
+        change_cost_submenu.add_command(label="Energy", command=lambda: self.change_values(4))
+        change_cost_submenu.add_command(label="Energy const", command=lambda: self.change_values(5))
 
-        self.frames = {}                                    # dictionary with all frames in App
+        # create dictionary with frames, where key: value is PageClass: created_frame
+        self.frames = {}
 
-        for frame_class in (StartPage, PageOne):
+        # from all defined classes create frames with master as root and main_class as self,
+        # with is this class - Application (self)
+        # also, put it in the grid and add to dictionary
+        for frame_class in (PageOne, PageTwo):
             frame = frame_class(root, self)
-            self.frames[frame_class] = frame           # adding frame start page to frames dict
-            frame.grid(row=0, column=0, sticky="nsew")  # putting frame start page it on root grid
+            frame.grid(row=0, column=0, sticky="nsew")
+            self.frames[frame_class] = frame
 
-        self.show_frame(PageOne)                          # showing frame in method show_frame (give name in dict)
+        # show the PageOne as fisrt thing to show on start
+        self.show_frame(PageOne)
 
+    # this is definition for showing the frame, we pass PageClass, then pick already
+    # made class from dictionary and treat it with tkraise method
     def show_frame(self, frame_to_show):
         frame = self.frames[frame_to_show]
         frame.tkraise()
 
+    def change_values(self, cost_index):
+        popup = tk.Tk()
+        popup.geometry("200x100")
+        popup.wm_title("Cost change")
+        label = ttk.Label(popup, text="Change value of: {}".format(self.frames[PageOne].unit_price_list[cost_index]))
+        label.grid(row=0, column=0, sticky="WE")
+        entry = tk.Entry(popup, width=10)
+        entry.grid(row=1, column=0)
+        button = ttk.Button(popup, text="Change", command=lambda: change_chosen_value())
+        button.grid(row=2, column=0, sticky="WENS")
 
-class StartPage(tk.Frame):
-
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
-        label = tk.Label(self, text="Start page!", font="15", bg="red")
-        label.pack()  # (fill="both", expand=True) fill on x or y and expand on while window
-        button = ttk.Button(self, text="Page One", command=lambda: controller.show_frame(PageOne))
-        button.pack()
+        def change_chosen_value():
+            new_value = entry.get()
+            self.frames[PageOne].actual_cost_list[cost_index].set(new_value)
 
 
 class PageOne(tk.Frame):
 
-    cost_names = ["cold_water_m3",
-                  "hot_water_m3",
-                  "gas_m3",
-                  "gas_const_fee",
-                  "energy_kwh",
-                  "energy_const_fee"]
-
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent, relief="sunken")
-        label_page_one = tk.Label(self, text="Page One!", bg="red", font=NORMAL_FONT)
-        label_page_one.grid(row=0, column=1)  # (fill="both", expand=True) fill on x or y and expand on while window
-        button_to_start_page = ttk.Button(self, text="Start Page", command=lambda: controller.show_frame(StartPage))
-        button_to_start_page.grid(row=1, column=1)
-        label_separator = ttk.Label(self, text="------------------", font=LARGE_FONT)
-        label_separator.grid(row=2, column=1)
+    def __init__(self, master, main_class):
+        tk.Frame.__init__(self, master)
+        label = tk.Label(self, text='Page One', width=10)
+        label.grid(row=0, column=0)
+        button_style = ttk.Style()
+        button_style.configure('button.TButton', foreground='green', font=NORMAL_FONT)
+        button = ttk.Button(self, style='button.TButton', text='Go to Page Two', command=lambda: main_class.show_frame(PageTwo))
+        button.grid(row=0, column=1)
 
         self.labels_page_one()
-        #self.reading_previous_values()
-        self.reading_previous_values_2()
+        self.reading_previous_values()
         self.setting_previous_values()
-
-        self.value_names = ["current_cold_water_bathroom_m3",
-                            "current_hot_water_bathroom_m3",
-                            "current_cold_water_kitchen_m3",
-                            "current_hot_water_kitchen_m3",
-                            "current_gas_m3",
-                            "current_energy_kwh"]
-        self.cost_names = ["cold_water_m3",
-                           "hot_water_m3",
-                           "gas_m3",
-                           "gas_const_fee",
-                           "energy_kwh",
-                           "energy_const_fee"]
-
-    #@classmethod
-    def change_values_window(self, cost_index):
-        popup = tk.Tk()
-        popup.wm_title("Cost change")
-        label = ttk.Label(popup, text="Change value of: {}".format(self.actual_cost_list[cost_index]))
-        label.grid(row=0, column=0)
-        entry = tk.Entry(popup, width=10)
-        entry.grid(row=1, column=0)
-        button = ttk.Button(popup, text="Print", command=lambda: print(PageOne.cost_names))
-        button.grid(row=2, column=0)
 
     def labels_page_one(self):
 
         # ##----------//      CREATING ICONS      //----------## #
         column_icons = 0
-        self.image_c_w = tk.PhotoImage(file="images_to_wge/cold_drop.png").subsample(4, 4)
-        label_c_w_b = tk.Label(self, image=self.image_c_w)
-        label_c_w_k = tk.Label(self, image=self.image_c_w)
-        label_c_w_b.grid(row=4, column=column_icons)
-        label_c_w_k.grid(row=6, column=column_icons)
+        row_icons = 3
+        image_list = ['images_to_wge/cold_drop.png',
+                      'images_to_wge/hot_drop.png',
+                      'images_to_wge/cold_drop.png',
+                      'images_to_wge/hot_drop.png',
+                      'images_to_wge/gas.png',
+                      'images_to_wge/energy.png']
 
-        self.image_h_w = tk.PhotoImage(file="images_to_wge/hot_drop.png").subsample(4, 4)
-        label_h_w_b = tk.Label(self, image=self.image_h_w)
-        label_h_w_k = tk.Label(self, image=self.image_h_w)
-        label_h_w_b.grid(row=5, column=column_icons)
-        label_h_w_k.grid(row=7, column=column_icons)
-
-        self.image_g = tk.PhotoImage(file="images_to_wge/gas.png").subsample(4, 4)
-        label_g = tk.Label(self, image=self.image_g)
-        label_g.grid(row=8, column=column_icons)
-
-        self.image_e = tk.PhotoImage(file="images_to_wge/energy.png").subsample(4, 4)
-        label_e = tk.Label(self, image=self.image_e)
-        label_e.grid(row=9, column=column_icons)
+        for image in image_list:
+            icon = tk.PhotoImage(file=image).subsample(4, 4)
+            label = ttk.Label(self, image=icon)
+            label.image = icon  # keep a reference!
+            label.grid(row=row_icons, column=column_icons, sticky='E')
+            row_icons += 1
         # ##----------// ------------------------ //----------## #
 
         # ##----------// CREATING QUANTITY LABELS //----------## #
         column_quantity = 1
+        row_quantity = 3
         label = ttk.Label(self, text="Quantity: ", font=LARGE_FONT)
-        label.grid(row=3, column=column_quantity, sticky="e")
+        label.grid(row=2, column=column_quantity, sticky="E")
 
         quantity_list = [u"cold water bathroom [m\u00B3]: ",
                          u"hot water bathroom [m\u00B3]: ",
@@ -145,125 +124,135 @@ class PageOne(tk.Frame):
                          u"hot water kitchen [m\u00B3]: ",
                          u"gas [m\u00B3]: ",
                          u"energy [kWh]: "]
-        row = 4
+
         for text_to_show in quantity_list:
             label = ttk.Label(self, text=text_to_show, font=NORMAL_FONT)
-            label.grid(row=row, column=column_quantity, sticky="e")
-            row += 1
+            label.grid(row=row_quantity, column=column_quantity, sticky="E")
+            row_quantity += 1
         # ##----------// //----------## #
 
         # ##----------// CREATING PREVIOUS LABELS //----------## #
-        previous_column = 2
+        column_previous = 2
+        row_previous = 3
         label_previous = ttk.Label(self, text="Previous: ", font=LARGE_FONT)
-        label_previous.grid(row=3, column=2, sticky="")
+        label_previous.grid(row=2, column=column_previous, sticky="E")
+
         self.previous_values_list = []
         for i in range(6):
             self.previous_values_list.append(tk.DoubleVar())
-        row = 4
+
         for value in self.previous_values_list:
             label = ttk.Label(self, textvariable=value, font=NORMAL_FONT)
-            label.grid(row=row, column=previous_column, sticky="")
-            row += 1
+            label.grid(row=row_previous, column=column_previous, sticky="")
+            row_previous += 1
         # ##----------// //----------## #
 
         # ##----------// CREATING ACTUAL VALUES LABELS //----------## #
-        actual_column = 3
+        column_actual = 3
+        row_actual = 3
         label_actual = ttk.Label(self, text="Actual: ", font=LARGE_FONT)
-        label_actual.grid(row=3, column=actual_column, sticky="nse")
+        label_actual.grid(row=2, column=column_actual, sticky="E")
+
         self.actual_values_list = []
         for i in range(6):
             self.actual_values_list.append(tk.DoubleVar())
-        row = 4
+
         for value in self.actual_values_list:
             entry = tk.Entry(self, textvariable=value, width=10)
-            entry.grid(row=row, column=actual_column, sticky="")
-            row += 1
+            entry.grid(row=row_actual, column=column_actual, sticky="")
+            row_actual += 1
         # ##----------// //----------## #
 
         # ##----------// CREATING DIFFERENCE LABELS //----------## #
-        difference_column = 4
+        column_difference = 4
+        row_difference = 3
         label_difference = ttk.Label(self, text="Difference: ", font=LARGE_FONT)
-        label_difference.grid(row=3, column=difference_column, sticky="nse")
+        label_difference.grid(row=2, column=column_difference, sticky="E")
+
         self.difference_values_list = []
         for i in range(6):
             self.difference_values_list.append(tk.DoubleVar())
 
-        row = 4
         for value in self.difference_values_list:
             label = ttk.Label(self, textvariable=value, font=NORMAL_FONT)
-            label.grid(row=row, column=difference_column, sticky="")
-            row += 1
+            label.grid(row=row_difference, column=column_difference, sticky="")
+            row_difference += 1
         # ##----------// //----------## #
 
         # ##----------// CREATING CALCULATIONS TEXT LABELS //----------## #
-        calculations_column = 5
+        column_calculations = 5
+        row_calculations = 3
         self.label_calculations = ttk.Label(self, text="Calculations: ", font=LARGE_FONT)
-        self.label_calculations.grid(row=3, column=calculations_column, sticky="")
+        self.label_calculations.grid(row=2, column=column_calculations, sticky="")
         self.total_cost = ttk.Label(self, text="Total cost: ", font=LARGE_FONT)
-        self.total_cost.grid(row=10, column=calculations_column, sticky="")
+        self.total_cost.grid(row=9, column=column_calculations, sticky="")
 
         self.calculation_text_list = []
         for i in range(6):
             self.calculation_text_list.append(tk.StringVar())
-        row = 4
+
         for text_to_show in self.calculation_text_list:
             label = ttk.Label(self, textvariable=text_to_show, font=NORMAL_FONT, width=25, anchor="e")
-            label.grid(row=row, column=calculations_column, sticky="e")
-            row += 1
+            label.grid(row=row_calculations, column=column_calculations, sticky="e")
+            row_calculations += 1
         # ##----------// //----------## #
 
         # ##----------// CREATING COST LABELS //----------## #
-        cost_column = 6
+        column_cost = 6
+        row_cost = 3
         label_cost = ttk.Label(self, text="Cost: ", font=LARGE_FONT)
-        label_cost.grid(row=3, column=cost_column, sticky="nse")
+        label_cost.grid(row=2, column=column_cost, sticky="nse")
+
         self.calculation_cost_value_list = []
         for i in range(7):
             self.calculation_cost_value_list.append(tk.DoubleVar())
-        row = 4
+
         for text_to_show in self.calculation_cost_value_list:
             label = ttk.Label(self, textvariable=text_to_show, font=NORMAL_FONT)
-            label.grid(row=row, column=cost_column, sticky="")
-            row += 1
+            label.grid(row=row_cost, column=column_cost, sticky="")
+            row_cost += 1
         # ##----------// //----------## #
 
         # ##----------// CREATING UNIT COST LABELS //----------## #
         column_unit_cost = 1
+        row_unit_cost = 10
         label_cost_separator = ttk.Label(self, text="")
         label_cost_separator.grid(row=10, column=1, sticky="e")
         label_unit_price = ttk.Label(self, text="Unit cost: ", font=LARGE_FONT)
         label_unit_price.grid(row=11, column=1, sticky="e")
-        unit_price_list = [u"cold water [m\u00B3]: ",
+        self.unit_price_list = [u"cold water [m\u00B3]: ",
                            u"hot water [m\u00B3]: ",
                            u"gas [m\u00B3]: ",
                            "gas const: ",
                            "energy [kWh]: ",
                            "energy const: "]
-        row = 12
-        for text_to_show in unit_price_list:
+
+        for text_to_show in self.unit_price_list:
             label = ttk.Label(self, text=text_to_show)
-            label.grid(row=row, column=column_unit_cost, sticky="e")
-            row += 1
+            label.grid(row=row_unit_cost, column=column_unit_cost, sticky="e")
+            row_unit_cost += 1
         # ##----------// //----------## #
 
         # ##----------// CREATING ACTUAL COST LABELS //----------## #
-        actual_cost_column = 2
+        column_actual_cost = 2
+        row_actual_cost = 10
+
         self.actual_cost_list = []
         for i in range(6):
             self.actual_cost_list.append(tk.DoubleVar())
 
-        row = 12
         for value in self.actual_cost_list:
             label = ttk.Label(self, textvariable=value)
-            label.grid(row=row, column=actual_cost_column, sticky="")
-            row += 1
+            label.grid(row=row_actual_cost, column=column_actual_cost, sticky="")
+            row_actual_cost += 1
         # ##----------// //----------## #
 
         calculate_button = ttk.Button(self, text="Calculate", command=self.calculating_difference)
-        calculate_button.grid(row=10, column=difference_column)
-        save_button = ttk.Button(self, text="Save to file", command=self.sting_saving_to_file)
-        save_button.grid(row=12, column=difference_column, rowspan=3, columnspan=3, sticky="W")
+        calculate_button.grid(row=11, column=5, rowspan=2, sticky="WENS")
+        save_button = ttk.Button(self, text="Save to file", command=self.string_saving_to_file)
+        save_button.grid(row=13, column=6, rowspan=2, sticky="WENS")
 
-    def reading_previous_values_2(self):
+    def reading_previous_values(self):
         """
         Loading from file
         Loads 11 pieces of data in following order:
@@ -282,15 +271,15 @@ class PageOne(tk.Frame):
         12 - energy_const_fee
         """
         self.all_values = []
-        with open("fees2.txt", "r") as fee_file:
-            for line in fee_file:
-                self.all_values.append(line.strip().split(';'))
+        with open("fees2.csv", "r") as fee_file:
+            last_line = fee_file.readlines()[-1]
+            self.all_values = last_line.strip().split(';')
         return self.all_values
 
     def setting_previous_values(self):
         for i in range(6):
-            self.previous_values_list[i].set(self.all_values[-1][i+1])
-            self.actual_cost_list[i].set(self.all_values[-1][i+1+6])
+            self.previous_values_list[i].set((self.all_values[1:])[i])
+            self.actual_cost_list[i].set((self.all_values[1:])[i+6])
 
     def calculating_difference(self):
         """
@@ -332,46 +321,36 @@ class PageOne(tk.Frame):
         self.calculation_cost_value_list[6].set(total_cost)
 
     def string_to_write_creating(self):
-        string = ""
+        string = '.'.join(str(datetime.date.today()).split('-')[::-1]) + ' ; '
+
         for i in range(6):
-            string += self.value_names[i] + "," + str(self.calculation_cost_value_list[i].get()) + ";"
+            string += str(self.actual_values_list[i].get()) + ' ; '
         for i in range(6):
-            string += self.cost_names[i] + "," + str(self.actual_cost_list[i].get()) + ";"
+            string += str(self.actual_cost_list[i].get()) + ' ; '
         string += "\n"
         return string
 
-        """
-        difference_cold_water_bathroom_m3_to_pass = self.actual_values_list[0].get() - self.previous_values_list[0].get()
-        difference_cold_water_bathroom_m3_to_pass = round(difference_cold_water_bathroom_m3_to_pass, 3)
-        self.difference_values_list[0].set(difference_cold_water_bathroom_m3_to_pass)
-
-        difference_hot_water_bathroom_m3_to_pass = self.actual_values_list[1].get() - self.previous_values_list[1].get()
-        difference_hot_water_bathroom_m3_to_pass = round(difference_hot_water_bathroom_m3_to_pass, 3)
-        self.difference_values_list[1].set(difference_hot_water_bathroom_m3_to_pass)
-
-        difference_cold_water_kitchen_m3_to_pass = self.actual_values_list[2].get() - self.previous_values_list[2].get()
-        difference_cold_water_kitchen_m3_to_pass = round(difference_cold_water_kitchen_m3_to_pass, 3)
-        self.difference_values_list[2].set(difference_cold_water_kitchen_m3_to_pass)
-
-        difference_hot_water_kitchen_m3_to_pass = self.actual_values_list[3].get() - self.previous_values_list[3].get()
-        difference_hot_water_kitchen_m3_to_pass = round(difference_hot_water_kitchen_m3_to_pass, 3)
-        self.difference_values_list[3].set(difference_hot_water_kitchen_m3_to_pass)
-
-        difference_gas_m3_to_pass = self.actual_values_list[4].get() - self.previous_values_list[4].get()
-        difference_gas_m3_to_pass = round(difference_gas_m3_to_pass, 3)
-        self.difference_values_list[4].set(difference_gas_m3_to_pass)
-
-        difference_energy_kwh_value = self.actual_values_list[5].get() - self.previous_values_list[5].get()
-        difference_energy_kwh_value = round(difference_energy_kwh_value, 3)
-        self.difference_values_list[5].set(difference_energy_kwh_value)
-        """
-
-    def sting_saving_to_file(self):
-        fee_file = open("fees.txt", "a")
-        fee_file.write(self.string_to_write_creating())
-        fee_file.close()
+    def string_saving_to_file(self):
+        with open("fees2.csv", "a") as fee_file:
+            fee_file.write(self.string_to_write_creating())
         self.reading_previous_values()
+        self.setting_previous_values()
 
-fee_calculator = Application()
-fee_calculator.mainloop()
 
+
+
+
+class PageTwo(tk.Frame):
+    """
+    For now, let's leave it empty
+    """
+    def __init__(self, master, main_class):
+        tk.Frame.__init__(self, master)
+        label = tk.Label(self, text='Page Two', width=50)
+        label.pack()
+        button = tk.Button(self, text='Go to Page One', command=lambda: main_class.show_frame(PageOne))
+        button.pack()
+
+if __name__ == '__main__':
+    fee_calculator = Application()
+    fee_calculator.mainloop()
