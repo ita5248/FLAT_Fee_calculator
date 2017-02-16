@@ -321,13 +321,13 @@ class PageOne(tk.Frame):
         self.calculation_cost_value_list[6].set(total_cost)
 
     def string_to_write_creating(self):
-        string = '.'.join(str(datetime.date.today()).split('-')[::-1]) + ' ; '
+        string = '\n' + '.'.join(str(datetime.date.today()).split('-')[::-1]) + ' ; '
 
         for i in range(6):
             string += str(self.actual_values_list[i].get()) + ' ; '
         for i in range(6):
             string += str(self.actual_cost_list[i].get()) + ' ; '
-        string += "\n"
+        string = string[:-2]
         return string
 
     def string_saving_to_file(self):
